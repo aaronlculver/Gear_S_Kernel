@@ -1100,8 +1100,8 @@ static int mdss_fb_blank(int blank_mode, struct fb_info *info)
 
 	if (mfd->op_enable == 0) {
 		if (blank_mode == FB_BLANK_UNBLANK ||
-			blank_mode == FB_BLANK_NORMAL ) /*|| 
-			blank_mode == FB_BLANK_VSYNC_SUSPEND)*/
+			blank_mode == FB_BLANK_NORMAL || 
+			blank_mode == FB_BLANK_VSYNC_SUSPEND)
 			mfd->suspend.panel_power_on = true;
 		else
 			mfd->suspend.panel_power_on = false;
